@@ -15,7 +15,6 @@ services:
     environment:
       - INFLUXDB_DB=health
   ingester:
-    image: k0rventen/apple-health-grafana-ingester
     build: ./ingester
     volumes:
-    - <local_path_to_export.zip>:/export.zip
+    - ./export.xml:/export.xml
